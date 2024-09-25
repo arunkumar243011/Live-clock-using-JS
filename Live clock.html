@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <title>24 Hours Clock</title>
+</head>
+<body>
+    <h1>Live 24 Hours Clock</h1>
+    <div id="clock"></div>
+</body>
+<style>
+    h1{
+        margin-top: 20px;
+        text-align: center;
+    }
+    #clock {
+        margin: 20px auto;
+        padding: 10px;
+        background: #ccecf5;
+        width: 50%;
+        text-align: center;
+        height: 50px;
+        color: #030303;
+        font-size: 34px;
+        font-family: calibri;
+    }
+</style>
+<script>
+    function changeTimeFormat() {
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    document.getElementById("clock").innerHTML = hours + ':' + minutes + ':' + seconds;   
+}
+setInterval(changeTimeFormat, 1000);
+</script>
+</html>
